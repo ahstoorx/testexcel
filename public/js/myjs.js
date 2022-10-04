@@ -3,7 +3,16 @@
     prenomListe = []
 
   
-
+    function CloseByClickOutsite()
+    {
+        window.addEventListener('click', function(e){   
+            if (document.getElementsByClassName('dropdown-content').contains(e.target)){
+            // Clicked in box
+            } else{
+            // Clicked outside the box
+            }
+        });
+    }
 
 // cette fonction en relation avec le champ de filtrage permet de trier la liste des check box
     function FiltreCheckBox(identifiant,ClassList,dataType)
@@ -27,9 +36,23 @@
       }
     }
 
+
+    function closeAll()
+    {
+        // document.getElementById(identifiant).classList.contains('show')?UncheckAll(classList)?:'';
+        let list = document.getElementsByClassName('dropdown-content')
+
+        for(let i=0; i<list.length;i++)
+        {
+            
+            list[i].classList.contains("show") ? list[i].classList.remove("show") : '';
+        }
+    }
+
     // cette fonction controle toggle de popup
     function myFunction(identifiant) {
-      // document.getElementById(identifiant).classList.contains('show')?UncheckAll(classList)?:'';
+        closeAll();
+
       document.getElementById(identifiant).classList.toggle("show");
       // document.getElementById(identifiant).classList.contains('show')?UncheckAll('nom_checkbox'):'';
     }
@@ -83,11 +106,9 @@
           }
         }
       }
-      myFunction(idDrop)
+      closeAll();
       SearchWord(TypeData,nomListe)
-      
-      
-      
+    
     }
 
   
