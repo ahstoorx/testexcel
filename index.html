@@ -108,9 +108,71 @@
                     &#x290B;
                   </button>
                   <div id="myDropdown_10" class="dropdown-content">
-                    <a href="#home">Home2</a>
-                    <a href="#about">About2</a>
-                    <a href="#contact">Contact2</a>
+                    <div class="row">
+                      <div class="col">
+                        <form action="" class="form">
+
+                          <div class="form-group">
+                            <label for="search" class="form-label">Recherche</label>
+                            <input type="search" id="myDropdown_input" class="form-control"
+                              onkeyup="FiltreCheckBox('myDropdown_input','prenom_checkbox','name')">
+                          </div>
+
+                          <div class="form-check mt-3">
+                            <input class="form-check-input prenom_checkbox" type="checkbox" value="" id="champ_prenom_1"
+                              name="Otto" onchange="checkChecked(event,'champ_prenom_1')">
+                            <label class="form-check-label" for="champ_prenom_1">
+                              Mark Otto
+                            </label>
+                          </div>
+
+                          <div class="form-check">
+                            <input class="form-check-input prenom_checkbox" type="checkbox" value="" id="champ_prenom_2"
+                              name="hcnt" onchange="checkChecked(event,'champ_prenom_2')">
+                            <small class="form-check-label" for="champ_prenom_2">
+                              adv hcnt
+                            </small>
+                          </div>
+
+                          <div class="form-check">
+                            <input class="form-check-input prenom_checkbox" type="checkbox" value="" id="champ_prenom_3"
+                              name="doudou" onchange="checkChecked(event,'champ_prenom_3')">
+                            <small class="form-check-label" for="champ_prenom_3">
+                              dmf doudou
+                            </small>
+                          </div>
+
+                          <div class="form-check">
+                            <input class="form-check-input prenom_checkbox" type="checkbox" value="" id="champ_prenom_4"
+                              name="affou" onchange="checkChecked(event,'champ_prenom_4')">
+                            <small class="form-check-label" for="champ_prenom_4">
+                              aff affou
+                            </small>
+                          </div>
+
+                          <div class="form-group mt-5">
+                            <div class="justify-content-between d-flex">
+                              <div class="">
+                                <div class="form-check mt-2">
+                                  <input class="form-check-input " type="checkbox" value="" onchange="checkOrNot(event,'prenom_checkbox')"
+                                    id="flexCheckChecked">
+                                  <label class="form-check-label" for="flexCheckChecked">
+                                    Checked checkbox
+                                  </label>
+                                </div>
+                              </div>
+                              <div class="">
+                                <!-- onclick="myFunction('myDropdown')" -->
+                                <button type="button" class="btn btn-success justify-content-end align-content-end"
+                                  onclick="CreateCheckedListe('prenom_checkbox','myDropdown_10','prenom')">OK</button>
+                              </div>
+
+                            </div>
+
+                          </div>
+                        </form>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -140,19 +202,81 @@
 
           <th>
             <div class=" justify-content-between d-flex ">
-              <div class="">Las</div>
+              <div class="">Ville</div>
               <div class="">
 
-                <div class="dropdown" style="float: right;">
+                <div class="dropdown" >
                   <div class="">
                     <button onclick="myFunction('myDropdown_3')" class="dropbtn">
                       &#x290B;
                     </button>
                   </div>
                   <div id="myDropdown_3" class="dropdown-content">
-                    <a href="#home">Las</a>
-                    <a href="#about">About</a>
-                    <a href="#contact">Contact</a>
+                    <div class="row">
+                      <div class="col">
+                        <form action="" class="form">
+
+                          <div class="form-group">
+                            <label for="search" class="form-label">Recherche</label>
+                            <input type="search" id="myDropdown_input" class="form-control"
+                              onkeyup="FiltreCheckBox('myDropdown_input','ville_checkbox','name')">
+                          </div>
+
+                          <div class="form-check mt-3">
+                            <input class="form-check-input ville_checkbox" type="checkbox" value="" id="champ_ville_1"
+                              name="cotonou" onchange="checkChecked(event,'champ_ville_1')">
+                            <label class="form-check-label" for="champ_ville_1">
+                              cotonou
+                            </label>
+                          </div>
+
+                          <div class="form-check">
+                            <input class="form-check-input ville_checkbox" type="checkbox" value="" id="champ_ville_2"
+                              name="agla" onchange="checkChecked(event,'champ_ville_2')">
+                            <small class="form-check-label" for="champ_ville_2">
+                              agla
+                            </small>
+                          </div>
+
+                          <div class="form-check">
+                            <input class="form-check-input ville_checkbox" type="checkbox" value="" id="champ_ville_3"
+                              name="calavi" onchange="checkChecked(event,'champ_ville_3')">
+                            <small class="form-check-label" for="champ_ville_3">
+                              calavi
+                            </small>
+                          </div>
+
+                          <div class="form-check">
+                            <input class="form-check-input ville_checkbox" type="checkbox" value="" id="champ_ville_4"
+                              name="vedoko" onchange="checkChecked(event,'champ_ville_4')">
+                            <small class="form-check-label" for="champ_ville_4">
+                             vedoko
+                            </small>
+                          </div>
+
+                          <div class="form-group mt-5">
+                            <div class="justify-content-between d-flex">
+                              <div class="">
+                                <div class="form-check mt-2">
+                                  <input class="form-check-input " type="checkbox" value="" onchange="checkOrNot(event,'ville_checkbox')"
+                                    id="flexCheckChecked">
+                                  <label class="form-check-label" for="flexCheckChecked">
+                                    Checked checkbox
+                                  </label>
+                                </div>
+                              </div>
+                              <div class="">
+                                <!-- onclick="myFunction('myDropdown')" -->
+                                <button type="button" class="btn btn-success justify-content-end align-content-end"
+                                  onclick="CreateCheckedListe('ville_checkbox','myDropdown_3','ville')">OK</button>
+                              </div>
+
+                            </div>
+
+                          </div>
+                        </form>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -176,7 +300,7 @@
           <td>hcnt</td>
           <td>agla</td>
         </tr>
-        <tr class="lignesFiltre" data-nom="dmf" data-prenom="affou" data-ville="calavi">
+        <tr class="lignesFiltre" data-nom="dmf" data-prenom="doudou" data-ville="calavi">
           <th scope="row">1</th>
           <td>dmf</td>
           <td>doudou</td>
@@ -196,151 +320,7 @@
 
 
 
-  <script>
-    // tableau à utiliser pour le filtrage
-    nomListe = [];
-    prenomListe = []
-
-  
-
-
-// cette fonction en relation avec le champ de filtrage permet de trier la liste des check box
-    function FiltreCheckBox(identifiant,ClassList,dataType)
-    {
-    
-      let vealeurRecherche  = document.getElementById(identifiant).value.toUpperCase();
-      let table = document.getElementsByClassName(ClassList)
-
-      for(let i=0; i<table.length;i++)
-      {
-        let data  = table[i].getAttribute(dataType).toUpperCase()
-        let elementParent = table[i].parentNode;
-
-        if(data.indexOf(vealeurRecherche) > -1)
-        {
-          elementParent.classList.contains("d-none") ? elementParent.classList.remove("d-none") : '';
-        }
-        else {
-          elementParent.classList.contains("d-none") ? '' : elementParent.classList.add("d-none");
-        }
-      }
-    }
-
-    // cette fonction controle toggle de popup
-    function myFunction(identifiant) {
-      // document.getElementById(identifiant).classList.contains('show')?UncheckAll(classList)?:'';
-      document.getElementById(identifiant).classList.toggle("show");
-      // document.getElementById(identifiant).classList.contains('show')?UncheckAll('nom_checkbox'):'';
-    }
-
-
-    // Cette fonction permet de filtrer le tableau en utilisant les checkbox
-    // element c'est en faite le type de données genre data-element
-    // array c'est le type de tableau à utiliser pour le filtrage 
-    function SearchWord( element,array) {
-
-      let tableau = document.getElementsByClassName('lignesFiltre');
-
-      for (let i = 0; i < tableau.length; i++) {
-
-        let data = tableau[i].getAttribute('data-' + element).toUpperCase();
-
-        if (array.indexOf(data) > -1) {
-          tableau[i].classList.contains("d-none") ? tableau[i].classList.remove("d-none") : '';
-        }
-        else {
-          tableau[i].classList.contains("d-none") ? '' : tableau[i].classList.add("d-none");
-        }
-      }
-
-    }
-
-
-    // control l'action check du checkbox
-    function checkChecked(event, identifiant) {
-      event.target.checked === true ? document.getElementById(identifiant).setAttribute('value', 'SELECT') : document.getElementById(identifiant).setAttribute('value', '')
-    }
-
-    // Cette fonction permet de creer un tableau
-    function CreateCheckedListe(classElement,idDrop,TypeData='nom') {
-      let tableClass = document.getElementsByClassName(classElement);
-
-      for (let i = 0; i < tableClass.length; i++) {
-        let data = tableClass[i].getAttribute('value');
-
-        if (data === 'SELECT') {
-          if(nomListe.indexOf(tableClass[i].getAttribute('name'))== -1)
-          {
-            nomListe.push(tableClass[i].getAttribute('name').toUpperCase())
-          }
-          
-        }
-        else{
-          if(nomListe.indexOf(tableClass[i].getAttribute('name').toUpperCase())>-1)
-          {
-            nomListe.splice(nomListe.indexOf(tableClass[i].getAttribute('name').toUpperCase()))
-          }
-        }
-      }
-      myFunction(idDrop)
-      SearchWord(TypeData,nomListe)
-      
-      
-      
-    }
-
-  
-  // Fonction pour le check all ou non
-  function checkOrNot(event,classList)
-  {
-    event.target.checked === true ?CheckAll(classList):UncheckAll(classList);
-  }
-
-
-  function CheckAll(classList)
-  {
-    console.log('checkALL')
-    let tableau = document.getElementsByClassName(classList);
-
-    for(let i = 0;i<tableau.length;i++)
-    {
-      // tableau[i].setAttribute('checked', true)
-      // tableau[i].setAttribute('value', 'SELECT')
-      if(!tableau[i].checked)
-      {
-        tableau[i].checked=true;
-        tableau[i].setAttribute('value','SELECT');
-      }
-      else{
-        tableau[i].setAttribute('value','SELECT');
-      }
-      
-
-    }
-  }
-
-  function UncheckAll(classList)
-  {
-    console.log('UncheckAll')
-    let tableau = document.getElementsByClassName(classList);
-
-    for(let i = 0;i<tableau.length;i++)
-    {
-      if(tableau[i].checked)
-      {
-        tableau[i].checked=false;
-        tableau[i].setAttribute('value','');
-      }
-      else{
-        tableau[i].setAttribute('value','');
-      }
-      
-      // tableau[i].removeAttribute('checked')
-     
-     
-    }
-  }
-  </script>
+  <script src="./public/js/myjs.js"></script>
 </body>
 
 </html>
