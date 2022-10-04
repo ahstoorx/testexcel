@@ -1,0 +1,346 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bootstrap demo</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="./public/css/style.css">
+</head>
+
+<body>
+  <div class="container">
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>
+            <div class=" justify-content-between d-flex ">
+              <div class="">#</div>
+              <div class="">
+                <div class="dropdown" style="float: right;">
+                  <button onclick="myFunction('myDropdown')" class="dropbtn">
+                    &#x290B;
+                  </button>
+
+                  <div id="myDropdown" class="dropdown-content">
+                    <div class="row">
+                      <div class="col">
+                        <form action="" class="form">
+
+                          <div class="form-group">
+                            <label for="search" class="form-label">Recherche</label>
+                            <input type="search" id="myDropdown_input" class="form-control"
+                              onkeyup="FiltreCheckBox('myDropdown_input','nom_checkbox','name')">
+                          </div>
+
+                          <div class="form-check mt-3">
+                            <input class="form-check-input nom_checkbox" type="checkbox" value="" id="champ_nom_1"
+                              name="Mark" onchange="checkChecked(event,'champ_nom_1')">
+                            <label class="form-check-label" for="champ_nom_1">
+                              Mark Otto
+                            </label>
+                          </div>
+
+                          <div class="form-check">
+                            <input class="form-check-input nom_checkbox" type="checkbox" value="" id="champ_nom_2"
+                              name="adv" onchange="checkChecked(event,'champ_nom_2')">
+                            <small class="form-check-label" for="champ_nom_2">
+                              adv hcnt
+                            </small>
+                          </div>
+
+                          <div class="form-check">
+                            <input class="form-check-input nom_checkbox" type="checkbox" value="" id="champ_nom_3"
+                              name="dmf" onchange="checkChecked(event,'champ_nom_3')">
+                            <small class="form-check-label" for="champ_nom_3">
+                              dmf doudou
+                            </small>
+                          </div>
+
+                          <div class="form-check">
+                            <input class="form-check-input nom_checkbox" type="checkbox" value="" id="champ_nom_4"
+                              name="aff" onchange="checkChecked(event,'champ_nom_4')">
+                            <small class="form-check-label" for="champ_nom_4">
+                              aff affou
+                            </small>
+                          </div>
+
+                          <div class="form-group mt-5">
+                            <div class="justify-content-between d-flex">
+                              <div class="">
+                                <div class="form-check mt-2">
+                                  <input class="form-check-input " type="checkbox" value="" onchange="checkOrNot(event,'nom_checkbox')"
+                                    id="flexCheckChecked">
+                                  <label class="form-check-label" for="flexCheckChecked">
+                                    Checked checkbox
+                                  </label>
+                                </div>
+                              </div>
+                              <div class="">
+                                <!-- onclick="myFunction('myDropdown')" -->
+                                <button type="button" class="btn btn-success justify-content-end align-content-end"
+                                  onclick="CreateCheckedListe('nom_checkbox','myDropdown')">OK</button>
+                              </div>
+
+                            </div>
+
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </th>
+
+          <th>
+            <div class=" justify-content-between d-flex ">
+              <div class="">#</div>
+              <div class="">
+                <div class="dropdown" style="float: right;">
+                  <button onclick="myFunction('myDropdown_10')" class="dropbtn">
+                    &#x290B;
+                  </button>
+                  <div id="myDropdown_10" class="dropdown-content">
+                    <a href="#home">Home2</a>
+                    <a href="#about">About2</a>
+                    <a href="#contact">Contact2</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </th>
+          <th>
+            <div class=" justify-content-between d-flex ">
+              <div class="">First</div>
+              <div class="">
+
+                <div class="dropdown" style="float: right;">
+                  <div class="">
+                    <button onclick="myFunction('myDropdown_4')" class="dropbtn">
+                      &#x290B;
+                    </button>
+                  </div>
+
+                  <div id="myDropdown_4" class="dropdown-content">
+                    <a href="#home">First</a>
+                    <a href="#about">About</a>
+                    <a href="#contact">Contact</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </th>
+
+          <th>
+            <div class=" justify-content-between d-flex ">
+              <div class="">Las</div>
+              <div class="">
+
+                <div class="dropdown" style="float: right;">
+                  <div class="">
+                    <button onclick="myFunction('myDropdown_3')" class="dropbtn">
+                      &#x290B;
+                    </button>
+                  </div>
+                  <div id="myDropdown_3" class="dropdown-content">
+                    <a href="#home">Las</a>
+                    <a href="#about">About</a>
+                    <a href="#contact">Contact</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </th>
+
+
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr class="lignesFiltre" data-nom="mark" data-prenom="otto" data-ville="cotonou">
+          <th scope="row">1</th>
+          <td >mark</td>
+          <td >Otto</td>
+          <td>cotonou</td>
+        </tr>
+        <tr class="lignesFiltre" data-nom="adv" data-prenom="hcnt" data-ville="agla">
+          <th scope="row">1</th>
+          <td>adv</td>
+          <td>hcnt</td>
+          <td>agla</td>
+        </tr>
+        <tr class="lignesFiltre" data-nom="dmf" data-prenom="affou" data-ville="calavi">
+          <th scope="row">1</th>
+          <td>dmf</td>
+          <td>doudou</td>
+          <td>calavi</td>
+        </tr>
+        <tr class="lignesFiltre" data-nom="aff" data-prenom="affou" data-ville="vedoko">
+          <th scope="row">1</th>
+          <td>aff</td>
+          <td>affou</td>
+          <td>vedoko</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+
+
+
+
+  <script>
+    // tableau à utiliser pour le filtrage
+    nomListe = [];
+    prenomListe = []
+
+  
+
+
+// cette fonction en relation avec le champ de filtrage permet de trier la liste des check box
+    function FiltreCheckBox(identifiant,ClassList,dataType)
+    {
+    
+      let vealeurRecherche  = document.getElementById(identifiant).value.toUpperCase();
+      let table = document.getElementsByClassName(ClassList)
+
+      for(let i=0; i<table.length;i++)
+      {
+        let data  = table[i].getAttribute(dataType).toUpperCase()
+        let elementParent = table[i].parentNode;
+
+        if(data.indexOf(vealeurRecherche) > -1)
+        {
+          elementParent.classList.contains("d-none") ? elementParent.classList.remove("d-none") : '';
+        }
+        else {
+          elementParent.classList.contains("d-none") ? '' : elementParent.classList.add("d-none");
+        }
+      }
+    }
+
+    // cette fonction controle toggle de popup
+    function myFunction(identifiant) {
+      // document.getElementById(identifiant).classList.contains('show')?UncheckAll(classList)?:'';
+      document.getElementById(identifiant).classList.toggle("show");
+      // document.getElementById(identifiant).classList.contains('show')?UncheckAll('nom_checkbox'):'';
+    }
+
+
+    // Cette fonction permet de filtrer le tableau en utilisant les checkbox
+    // element c'est en faite le type de données genre data-element
+    // array c'est le type de tableau à utiliser pour le filtrage 
+    function SearchWord( element,array) {
+
+      let tableau = document.getElementsByClassName('lignesFiltre');
+
+      for (let i = 0; i < tableau.length; i++) {
+
+        let data = tableau[i].getAttribute('data-' + element).toUpperCase();
+
+        if (array.indexOf(data) > -1) {
+          tableau[i].classList.contains("d-none") ? tableau[i].classList.remove("d-none") : '';
+        }
+        else {
+          tableau[i].classList.contains("d-none") ? '' : tableau[i].classList.add("d-none");
+        }
+      }
+
+    }
+
+
+    // control l'action check du checkbox
+    function checkChecked(event, identifiant) {
+      event.target.checked === true ? document.getElementById(identifiant).setAttribute('value', 'SELECT') : document.getElementById(identifiant).setAttribute('value', '')
+    }
+
+    // Cette fonction permet de creer un tableau
+    function CreateCheckedListe(classElement,idDrop,TypeData='nom') {
+      let tableClass = document.getElementsByClassName(classElement);
+
+      for (let i = 0; i < tableClass.length; i++) {
+        let data = tableClass[i].getAttribute('value');
+
+        if (data === 'SELECT') {
+          if(nomListe.indexOf(tableClass[i].getAttribute('name'))== -1)
+          {
+            nomListe.push(tableClass[i].getAttribute('name').toUpperCase())
+          }
+          
+        }
+        else{
+          if(nomListe.indexOf(tableClass[i].getAttribute('name').toUpperCase())>-1)
+          {
+            nomListe.splice(nomListe.indexOf(tableClass[i].getAttribute('name').toUpperCase()))
+          }
+        }
+      }
+      myFunction(idDrop)
+      SearchWord(TypeData,nomListe)
+      
+      
+      
+    }
+
+  
+  // Fonction pour le check all ou non
+  function checkOrNot(event,classList)
+  {
+    event.target.checked === true ?CheckAll(classList):UncheckAll(classList);
+  }
+
+
+  function CheckAll(classList)
+  {
+    console.log('checkALL')
+    let tableau = document.getElementsByClassName(classList);
+
+    for(let i = 0;i<tableau.length;i++)
+    {
+      // tableau[i].setAttribute('checked', true)
+      // tableau[i].setAttribute('value', 'SELECT')
+      if(!tableau[i].checked)
+      {
+        tableau[i].checked=true;
+        tableau[i].setAttribute('value','SELECT');
+      }
+      else{
+        tableau[i].setAttribute('value','SELECT');
+      }
+      
+
+    }
+  }
+
+  function UncheckAll(classList)
+  {
+    console.log('UncheckAll')
+    let tableau = document.getElementsByClassName(classList);
+
+    for(let i = 0;i<tableau.length;i++)
+    {
+      if(tableau[i].checked)
+      {
+        tableau[i].checked=false;
+        tableau[i].setAttribute('value','');
+      }
+      else{
+        tableau[i].setAttribute('value','');
+      }
+      
+      // tableau[i].removeAttribute('checked')
+     
+     
+    }
+  }
+  </script>
+</body>
+
+</html>
